@@ -1,0 +1,7 @@
+debug/
+backend/.terraform
+backend/.terraform.lock.hcl
+frontend/.terraform
+frontend/.terraform.lock.hcl
+backend/provision/terraform/.terraform
+backend/provision/terraform/.terraform.lock.hcl
