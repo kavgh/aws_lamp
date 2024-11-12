@@ -18,6 +18,7 @@ variable "ec2_sg_ids" {
   type        = list(string)
 }
 
-#variable "elb_sg_ids" {
-#  type = list(string)
-#}
+variable "elb_sg_ids" {
+  description = "List of the security group to associate with ELB instance"
+  type = list(string)
+}

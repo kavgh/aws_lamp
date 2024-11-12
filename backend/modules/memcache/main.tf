@@ -37,12 +37,6 @@ locals {
   tags = merge(var.tags, { Service = "elasticache" })
 }
 
-data "aws_subnet" "this" {
-  count = length(var.subnet_ids)
-
-  id = var.subnet_ids[count.index]
-}
-
 resource "aws_security_group" "this" {
   name        = "${local.name}-sg"
   description = "Allow connection to the ${var.engine} instance"

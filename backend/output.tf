@@ -53,7 +53,7 @@ output "out_sg_id" {
   value = module.vpc.out_sg_id
 }
 
-#output "sns_arn" {
-#  description = "The ARN of the SNS topic for subscription on events"
-#  value       = module.sns.sns_topic_arn
-#}
+output "sns_arn" {
+  description = "The ARN of the SNS topic for subscription on events"
+  value       = module.sns.sns_topic_arn
+}

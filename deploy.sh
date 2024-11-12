@@ -28,5 +28,5 @@ mvn install
 cd -
 cd ../../../frontend
 mv ~/Projects/resources/vprofile-project/target/*.war ./modules/s3/resources/ROOT.war
-terraform apply -var "vpc_id=$vpc_id" -var "public_subnet_ids=$subnet_ids" -var "sns_topic_arn=$sns_arn" -var "ec2_sg_ids=[$ec2_sg_id, $out_sg_id]" -auto-approve
+terraform apply -var "vpc_id=$vpc_id" -var "public_subnet_ids=$subnet_ids" -var "sns_topic_arn=$sns_arn" -var "ec2_sg_ids=[$ec2_sg_id, $out_sg_id]" -var "elb_sg_ids=[$lb_sg_id]" -auto-approve
 exit 0

@@ -46,7 +46,7 @@ module "beanstalk" {
   artifact_name        = module.s3.object_name
   sns_topic_arn        = var.sns_topic_arn
   sg_ids               = var.ec2_sg_ids
-#  elb_sg_ids           = var.elb_sg_ids
+  elb_sg_ids           = var.elb_sg_ids
 
   tags = local.tags
 }
